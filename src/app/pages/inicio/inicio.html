@@ -1,0 +1,70 @@
+<!-- ===== SECCIÓN DE BIENVENIDA ===== -->
+<section class="bienvenida"
+  style="background-image: linear-gradient(rgba(11, 42, 91, 0.55), rgba(11, 42, 91, 0.55)), url('img/portada.jpg'); background-size: cover;">
+  <div class="container">
+    <h1 class="display-5">Entérate de lo que pasa en el Poli</h1>
+    <p class="lead">Eventos, congresos, intercambios y todo lo que está moviendo a la comunidad grancolombiana.</p>
+    <a routerLink="/noticias" class="btn btn-amarillo btn-lg me-2">Ver las noticias</a>
+    <a routerLink="/contacto" class="btn btn-outline-light btn-lg">Escríbenos</a>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- ===== NOTICIAS DESTACADAS ===== -->
+  <section class="my-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Noticias destacadas</h2>
+      <a routerLink="/noticias">Ver todas &rarr;</a>
+    </div>
+    <div class="row">
+      @for (noticia of destacadas(); track noticia.id) {
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <app-noticia-card [noticia]="noticia" />
+        </div>
+      } @empty {
+        <p>Cargando noticias...</p>
+      }
+    </div>
+  </section>
+
+  <!-- ===== CATEGORÍAS ===== -->
+  <section class="mb-5">
+    <h2 class="mb-3">Explora por categoría</h2>
+    <div class="row row-cols-2 row-cols-md-5">
+      @for (cat of categorias; track cat.nombre) {
+        <div class="col mb-3">
+          <!-- queryParams manda la categoría en la URL: /noticias?categoria=Cultura -->
+          <a class="categoria" routerLink="/noticias" [queryParams]="{ categoria: cat.nombre }">
+            <div class="icono">{{ cat.icono }}</div>{{ cat.nombre }}
+          </a>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- ===== ¿SABÍAS QUE...? ===== -->
+  <section class="mb-5">
+    <h2 class="mb-3">¿Sabías que...?</h2>
+    <div class="row">
+      @for (dato of datos; track dato.numero) {
+        <div class="col-md-4 mb-3">
+          <div class="dato">
+            <div class="numero">{{ dato.numero }}</div>
+            <p class="mb-0">{{ dato.texto }}</p>
+          </div>
+        </div>
+      }
+    </div>
+    <p class="small text-muted">Datos tomados de las noticias de Actualidad Poli (septiembre de 2026).</p>
+  </section>
+</main>
+
+<!-- ===== LLAMADO A LA ACCIÓN ===== -->
+<section class="llamado">
+  <div class="container">
+    <h3>¿Pasó algo en tu sede o en tu programa?</h3>
+    <p>Cuéntanos y lo publicamos en NotiPoli.</p>
+    <a routerLink="/contacto" class="btn btn-principal btn-lg">Enviar mi noticia</a>
+  </div>
+</section>

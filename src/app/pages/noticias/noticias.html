@@ -1,0 +1,39 @@
+<!-- Título de la página -->
+<section class="titulo-pagina">
+  <div class="container">
+    <h1>Noticias</h1>
+    <p class="mb-0">Todo lo que está pasando en el Poli.</p>
+  </div>
+</section>
+
+<main class="container my-4">
+  <!-- ===== BUSCADOR Y FILTRO (two-way binding) ===== -->
+  <div class="row mb-4">
+    <div class="col-md-8 mb-2">
+      <input type="text" class="form-control" placeholder="Buscar noticia por título..." [(ngModel)]="texto">
+    </div>
+    <div class="col-md-4 mb-2">
+      <select class="form-select" [(ngModel)]="categoria">
+        <option value="Todas">Todas las categorías</option>
+        @for (cat of categorias; track cat) {
+          <option [value]="cat">{{ cat }}</option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <p class="text-muted small">Mostrando {{ filtradas().length }} de {{ todas().length }} noticias</p>
+
+  <!-- ===== LISTADO DE CARDS ===== -->
+  <div class="row">
+    @for (noticia of filtradas(); track noticia.id) {
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <app-noticia-card [noticia]="noticia" />
+      </div>
+    } @empty {
+      @if (todas().length > 0) {
+        <p class="alert alert-info">No se encontraron noticias con ese criterio.</p>
+      }
+    }
+  </div>
+</main>

@@ -1,0 +1,81 @@
+<section class="titulo-pagina">
+  <div class="container">
+    <h1>Administrar noticias</h1>
+    <p class="mb-0">Crea o elimina noticias (los cambios se guardan en el navegador).</p>
+  </div>
+</section>
+
+<main class="container my-4">
+  <div class="row">
+    <!-- ===== CREAR NOTICIA ===== -->
+    <div class="col-lg-5 mb-4">
+      <div class="caja-lateral">
+        <h5>Nueva noticia</h5>
+        <form (ngSubmit)="guardar()">
+          <div class="mb-2">
+            <label for="nTitulo" class="form-label">Título</label>
+            <input type="text" id="nTitulo" name="titulo" class="form-control" [(ngModel)]="titulo">
+          </div>
+          <div class="mb-2">
+            <label for="nCategoria" class="form-label">Categoría</label>
+            <select id="nCategoria" name="categoria" class="form-select" [(ngModel)]="categoria">
+              <option value="">Selecciona</option>
+              @for (cat of categorias; track cat) {
+                <option [value]="cat">{{ cat }}</option>
+              }
+            </select>
+          </div>
+          <div class="mb-2">
+            <label for="nSede" class="form-label">Sede</label>
+            <select id="nSede" name="sede" class="form-select" [(ngModel)]="sede">
+              @for (s of sedes; track s) {
+                <option [value]="s">{{ s }}</option>
+              }
+            </select>
+          </div>
+          <div class="mb-2">
+            <label for="nResumen" class="form-label">Resumen</label>
+            <input type="text" id="nResumen" name="resumen" class="form-control" [(ngModel)]="resumen">
+          </div>
+          <div class="mb-3">
+            <label for="nContenido" class="form-label">Contenido</label>
+            <textarea id="nContenido" name="contenido" class="form-control" rows="4" [(ngModel)]="contenido"></textarea>
+          </div>
+          @if (error()) {
+            <p class="text-danger">Todos los campos son obligatorios.</p>
+          }
+          <button type="submit" class="btn btn-principal">Guardar noticia</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===== LISTA / ELIMINAR ===== -->
+    <div class="col-lg-7">
+      <div class="caja-lateral">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h5 class="mb-0">Noticias publicadas ({{ noticias().length }})</h5>
+          <button class="btn btn-sm btn-outline-secondary" (click)="restaurar()">Restaurar originales</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead>
+              <tr><th>ID</th><th>Título</th><th>Categoría</th><th></th></tr>
+            </thead>
+            <tbody>
+              @for (n of noticias(); track n.id) {
+                <tr>
+                  <td>{{ n.id }}</td>
+                  <td>{{ n.titulo }}</td>
+                  <td><span class="badge etiqueta">{{ n.categoria }}</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-danger" (click)="eliminar(n.id)">Eliminar</button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

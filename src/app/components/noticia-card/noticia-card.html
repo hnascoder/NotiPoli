@@ -1,0 +1,10 @@
+<div class="card tarjeta-noticia h-100">
+  <!-- property binding: [src] y [alt] toman el valor de la noticia -->
+  <img [src]="noticia.imagen" class="card-img-top" [alt]="noticia.titulo">
+  <div class="card-body d-flex flex-column">
+    <span class="badge etiqueta mb-2">{{ noticia.categoria }}</span>
+    <h5 class="card-title">{{ noticia.titulo }}</h5>
+    <p class="card-text text-muted">{{ noticia.resumen }}</p>
+    <a [routerLink]="['/noticia', noticia.id]" class="btn btn-principal mt-auto">Ver más</a>
+  </div>
+</div>

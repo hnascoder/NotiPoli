@@ -1,0 +1,66 @@
+<section class="titulo-pagina">
+  <div class="container">
+    <h1>Contacto</h1>
+    <p class="mb-0">Envíanos tus dudas, sugerencias o la noticia de tu sede.</p>
+  </div>
+</section>
+
+<main class="container my-4">
+  <div class="row">
+    <!-- ===== FORMULARIO ===== -->
+    <div class="col-lg-7 mb-4">
+      <div class="caja-lateral">
+        <form (ngSubmit)="enviar()" novalidate>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo *</label>
+            <!-- [class.is-invalid] muestra el borde rojo de Bootstrap cuando hay error -->
+            <input type="text" id="nombre" name="nombre" class="form-control"
+                   [(ngModel)]="nombre" [class.is-invalid]="intentoEnviar() && !nombreValido()">
+            <div class="invalid-feedback">Escribe tu nombre (mínimo 3 letras).</div>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico *</label>
+            <input type="email" id="correo" name="correo" class="form-control" placeholder="nombre@correo.com"
+                   [(ngModel)]="correo" [class.is-invalid]="intentoEnviar() && !correoValido()">
+            <div class="invalid-feedback">Escribe un correo válido.</div>
+          </div>
+          <div class="mb-3">
+            <label for="asunto" class="form-label">Asunto *</label>
+            <select id="asunto" name="asunto" class="form-select"
+                    [(ngModel)]="asunto" [class.is-invalid]="intentoEnviar() && !asuntoValido()">
+              <option value="">Selecciona una opción</option>
+              @for (a of asuntos; track a) {
+                <option [value]="a">{{ a }}</option>
+              }
+            </select>
+            <div class="invalid-feedback">Selecciona un asunto.</div>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" class="form-control" rows="5"
+                      [(ngModel)]="mensaje" [class.is-invalid]="intentoEnviar() && !mensajeValido()"></textarea>
+            <div class="invalid-feedback">El mensaje debe tener mínimo 10 caracteres.</div>
+            <div class="form-text">{{ mensaje().length }} caracteres</div>
+          </div>
+          <button type="submit" class="btn btn-principal">Enviar mensaje</button>
+        </form>
+
+        <!-- Mensaje de confirmación -->
+        @if (confirmacion()) {
+          <div class="alert alert-success mt-3">{{ confirmacion() }}</div>
+        }
+      </div>
+    </div>
+
+    <!-- ===== INFORMACIÓN DE CONTACTO ===== -->
+    <div class="col-lg-5">
+      <div class="caja-lateral">
+        <h5>Información de contacto</h5>
+        <p><strong>Correo:</strong> contacto&#64;notipoli.com</p>
+        <p><strong>Teléfono:</strong> +57 601 000 0000</p>
+        <p><strong>Ciudad:</strong> Bogotá D.C., Colombia</p>
+        <p><strong>Horario:</strong> lunes a viernes, 8:00 a. m. a 5:00 p. m.</p>
+      </div>
+    </div>
+  </div>
+</main>

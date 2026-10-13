@@ -1,0 +1,190 @@
+/* =========================================================
+   estilos.css - Estilos propios de NotiPoli
+   (se usan junto con Bootstrap 5)
+   ========================================================= */
+
+/* Colores principales del sitio */
+:root {
+  --azul-oscuro: #0b2a5b;
+  --azul: #003893;     /* azul de la bandera */
+  --amarillo: #fcd116; /* amarillo de la bandera */
+  --rojo: #ce1126;     /* rojo de la bandera */
+  --gris-claro: #f4f6f9;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--gris-claro);
+}
+
+/* ---------- Header ---------- */
+.barra-superior {
+  background-color: var(--azul-oscuro);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff !important;
+}
+
+.logo span {
+  color: var(--amarillo);
+}
+
+.navbar .nav-link {
+  color: #dbe4ee !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--amarillo) !important;
+}
+
+/* Franja con los colores de la bandera de Colombia */
+.franja-colombia {
+  height: 8px;
+  background: linear-gradient(var(--amarillo) 0 50%, var(--azul) 50% 75%, var(--rojo) 75%);
+}
+
+/* ---------- Sección de bienvenida (Home) ---------- */
+.bienvenida {
+  background: linear-gradient(rgba(11, 42, 91, 0.55), rgba(11, 42, 91, 0.55)), url("../img/portada.jpg");
+  background-size: cover;
+  color: #ffffff;
+  padding: 90px 0;
+  text-align: center;
+}
+
+.bienvenida h1 {
+  font-weight: bold;
+}
+
+/* ---------- Encabezado de páginas internas ---------- */
+.titulo-pagina {
+  background-color: var(--azul);
+  color: #ffffff;
+  padding: 35px 0;
+}
+
+/* ---------- Botones ---------- */
+.btn-principal {
+  background-color: var(--azul);
+  color: #ffffff;
+}
+
+.btn-principal:hover {
+  background-color: var(--azul-oscuro);
+  color: #ffffff;
+}
+
+.btn-amarillo {
+  background-color: var(--amarillo);
+  color: var(--azul-oscuro);
+  font-weight: bold;
+}
+
+/* ---------- Tarjetas de noticias ---------- */
+.tarjeta-noticia {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.tarjeta-noticia:hover {
+  transform: translateY(-4px);
+}
+
+.tarjeta-noticia img {
+  height: 190px;
+  object-fit: cover;
+}
+
+.etiqueta {
+  background-color: var(--amarillo);
+  color: var(--azul-oscuro);
+  width: fit-content;
+}
+
+/* ---------- Categorías (Home) ---------- */
+.categoria {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--azul-oscuro);
+  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.categoria:hover {
+  background-color: var(--azul);
+  color: #ffffff;
+}
+
+.categoria .icono {
+  font-size: 2rem;
+}
+
+/* ---------- ¿Sabías que...? (datos del Poli) ---------- */
+.dato {
+  background-color: #ffffff;
+  border-top: 5px solid var(--rojo);
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  height: 100%;
+}
+
+/* ---------- Llamado a la acción ---------- */
+.dato .numero {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--azul);
+}
+
+.llamado {
+  background-color: var(--amarillo);
+  padding: 45px 0;
+  text-align: center;
+}
+
+/* ---------- Detalle ---------- */
+.imagen-detalle {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.caja-lateral {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* ---------- Favoritos ---------- */
+.fila-favorito img {
+  height: 90px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--azul-oscuro);
+  border-top: 6px solid var(--amarillo);
+  color: #c7d2de;
+  padding: 40px 0 20px;
+  margin-top: 50px;
+}
+
+footer a {
+  color: #c7d2de;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--amarillo);
+}

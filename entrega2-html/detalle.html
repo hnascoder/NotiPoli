@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotiPoli | Detalle</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / MENÚ DE NAVEGACIÓN ===== -->
+  <header>
+    <nav class="navbar navbar-expand-lg barra-superior">
+      <div class="container">
+        <a class="navbar-brand logo" href="index.html">Noti<span>Poli</span></a>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="noticias.html">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="favoritos.html">Favoritos <span class="badge bg-warning text-dark" id="contadorFavoritos">0</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="administrar.html">Administrar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- franja amarillo, azul y rojo -->
+    <div class="franja-colombia"></div>
+  </header>
+
+  <main class="container my-4" id="detalle">
+    <!-- Ruta de navegación -->
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="noticias.html">Noticias</a></li>
+        <li class="breadcrumb-item active">Detalle</li>
+      </ol>
+    </nav>
+
+    <div class="row">
+      <!-- ===== CONTENIDO DE LA NOTICIA ===== -->
+      <article class="col-lg-8 mb-4">
+        <span class="badge etiqueta" id="detalleCategoria"></span>
+        <h1 class="mt-2" id="detalleTitulo">Cargando...</h1>
+        <p class="text-muted" id="detalleDatos"></p>
+        <img id="detalleImagen" class="imagen-detalle mb-3" src="" alt="">
+        <p class="fs-5" id="detalleContenido"></p>
+
+        <!-- Botones de interacción -->
+        <button id="btnFavorito" class="btn btn-outline-warning me-2 mb-2">☆ Agregar a favoritos</button>
+        <a href="contacto.html" class="btn btn-principal me-2 mb-2">Contactar sobre esta noticia</a>
+        <a id="btnFuente" href="#" target="_blank" class="btn btn-outline-secondary mb-2">Leer completa en poli.edu.co</a>
+      </article>
+
+      <!-- ===== BARRA LATERAL ===== -->
+      <aside class="col-lg-4">
+        <div class="caja-lateral mb-3">
+          <h5>Noticias relacionadas</h5>
+          <ul id="relacionadas" class="ps-3"></ul>
+        </div>
+        <div class="caja-lateral">
+          <h5>¿Te gustó esta noticia?</h5>
+          <p>Guárdala en favoritos para leerla después.</p>
+          <a href="favoritos.html" class="btn btn-sm btn-principal">Ver mis favoritos</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="text-white">NotiPoli</h5>
+          <p>Las noticias de la comunidad grancolombiana en un solo lugar: Bogotá, Medellín y todo el país.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white">Secciones</h6>
+          <ul class="list-unstyled">
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="favoritos.html">Mis favoritos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white">Contacto</h6>
+          <p class="mb-1">contacto@notipoli.com</p>
+          <p class="mb-1">+57 601 000 0000</p>
+          <p>Bogotá D.C., Colombia</p>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center mb-1 small">Las noticias son resúmenes de la sección
+        <a href="https://www.poli.edu.co/noticias" target="_blank">Actualidad Poli</a> del Politécnico Grancolombiano.</p>
+      <p class="text-center mb-0 small">&copy; 2026 NotiPoli · Proyecto académico del módulo Desarrollo Front-end. No es un canal oficial del Poli.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/detalle.js"></script>
+</body>
+</html>

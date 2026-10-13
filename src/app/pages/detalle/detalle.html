@@ -1,0 +1,58 @@
+<main class="container my-4">
+  <!-- Ruta de navegación -->
+  <nav>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Inicio</a></li>
+      <li class="breadcrumb-item"><a routerLink="/noticias">Noticias</a></li>
+      <li class="breadcrumb-item active">Detalle</li>
+    </ol>
+  </nav>
+
+  @if (noExiste()) {
+    <div class="alert alert-danger">La noticia no existe. <a routerLink="/noticias">Volver al listado</a></div>
+  }
+
+  @if (noticia(); as n) {
+    <div class="row">
+      <!-- ===== CONTENIDO DE LA NOTICIA ===== -->
+      <article class="col-lg-8 mb-4">
+        <span class="badge etiqueta">{{ n.categoria }}</span>
+        <h1 class="mt-2">{{ n.titulo }}</h1>
+        <!-- DatePipe: convierte 2026-09-28 en una fecha en español -->
+        <p class="text-muted">Sede {{ n.sede }} · {{ n.fecha | date: "d 'de' MMMM 'de' y" : '+0000' : 'es' }}</p>
+        <img [src]="n.imagen" [alt]="n.titulo" class="imagen-detalle mb-3">
+        <p class="fs-5">{{ n.contenido }}</p>
+
+        <!-- Botones de interacción -->
+        <!-- [class.btn-warning]: class binding, cambia el color si es favorito -->
+        <button class="btn me-2 mb-2" (click)="cambiarFavorito(n.id)"
+                [class.btn-warning]="favorito()" [class.btn-outline-warning]="!favorito()">
+          {{ favorito() ? '★ Quitar de favoritos' : '☆ Agregar a favoritos' }}
+        </button>
+        <a routerLink="/contacto" class="btn btn-principal me-2 mb-2">Contactar sobre esta noticia</a>
+        @if (n.fuente) {
+          <a [href]="n.fuente" target="_blank" class="btn btn-outline-secondary mb-2">Leer completa en poli.edu.co</a>
+        }
+      </article>
+
+      <!-- ===== BARRA LATERAL ===== -->
+      <aside class="col-lg-4">
+        <div class="caja-lateral mb-3">
+          <h5>Noticias relacionadas</h5>
+          <ul class="ps-3">
+            @for (r of relacionadas(); track r.id) {
+              <li class="mb-2"><a [routerLink]="['/noticia', r.id]">{{ r.titulo }}</a></li>
+            } @empty {
+              <li>No hay más noticias de esta categoría.</li>
+            }
+          </ul>
+        </div>
+        <div class="caja-lateral">
+          <h5>¿Te gustó esta noticia?</h5>
+          <p>Guárdala en favoritos para leerla después.</p>
+          <a routerLink="/favoritos" class="btn btn-sm btn-principal">Ver mis favoritos</a>
+        </div>
+      </aside>
+    </div>
+  }
+</main>

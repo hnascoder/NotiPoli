@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "titulo": "PoliExchange 2026: una puerta a nuevas experiencias internacionales",
+    "categoria": "Internacional",
+    "fecha": "2026-09-28",
+    "sede": "Bogotá, Medellín y virtual",
+    "imagen": "img/noticia1.jpg",
+    "resumen": "La Oficina de Relaciones Internacionales mostró las opciones de intercambio, prácticas e idiomas en el exterior.",
+    "contenido": "Entre el 25 y el 27 de agosto la Oficina de Relaciones Internacionales e Interinstitucionales (ORII) realizó PoliExchange 2026 en Bogotá, Medellín y de forma virtual. Los estudiantes conocieron opciones de movilidad académica, prácticas en el exterior, cursos de idiomas, Work and Travel, Au Pair, voluntariados y dobles titulaciones. Participaron más de diez organizaciones aliadas y hubo un espacio llamado Glocal Village, donde estudiantes de intercambio de Rusia, Perú, México, Jamaica y Costa Rica compartieron su cultura y su comida con la comunidad Poli.",
+    "fuente": "https://www.poli.edu.co/noticias/poliexchange-2026-una-puerta-nuevas-experiencias-internacionales-en-el-poli",
+    "destacada": true
+  },
+  {
+    "id": 2,
+    "titulo": "El Poli llevó su experiencia sobre permanencia estudiantil a la Cumbre Líderes por la Educación 2026",
+    "categoria": "Institucional",
+    "fecha": "2026-09-25",
+    "sede": "Bogotá",
+    "imagen": "img/noticia2.jpg",
+    "resumen": "El rector habló sobre cómo apoyar a los estudiantes que trabajan y estudian para que no abandonen la carrera.",
+    "contenido": "La XIII Cumbre Líderes por la Educación se realizó el 23 y 24 de septiembre en El Cubo de Colsubsidio, en Bogotá, y tuvo como tema central la permanencia estudiantil. El rector Juan Fernando Montañez participó en un panel y explicó que en el Poli cerca del 90 % de los estudiantes se pagan su carrera y alrededor del 65 % trabaja mientras estudia. Como respuesta, la institución ofrece educación virtual con presencia en unos 980 municipios, opciones de financiación y el apoyo de la Fundación Huella Grancolombiana en temas como transporte, alimentación y conectividad.",
+    "fuente": "https://www.poli.edu.co/noticias/el-poli-llevo-su-experiencia-a-la-cumbre-lideres-por-la-educacion-2026",
+    "destacada": true
+  },
+  {
+    "id": 3,
+    "titulo": "El Poli fortaleció su cultura digital con formación en ciberseguridad e inteligencia artificial",
+    "categoria": "Tecnología",
+    "fecha": "2026-09-24",
+    "sede": "Bogotá",
+    "imagen": "img/noticia3.jpg",
+    "resumen": "Colaboradores de varias áreas se capacitaron en seguridad digital y uso responsable de la IA.",
+    "contenido": "El 25 de agosto la Dirección de Gobierno Digital organizó una jornada de formación en el auditorio principal de Bogotá, con participación de colaboradores de distintas áreas. Se habló de seguridad digital y del uso responsable de la inteligencia artificial, con la idea de que la ciberseguridad no es solo tarea del área de sistemas sino de toda la comunidad. También se presentó una plataforma de aprendizaje con casos prácticos, prevención de phishing y protección de datos, pensada para llegar a unos 1.800 colaboradores en seis meses.",
+    "fuente": "https://www.poli.edu.co/noticias/el-poli-fortalecio-su-cultura-digital-con-una-nueva-formacion-en-ciberseguridad-e",
+    "destacada": true
+  },
+  {
+    "id": 4,
+    "titulo": "Así se vivió la participación del Poli en la Fiesta del Libro y la Cultura de Medellín",
+    "categoria": "Cultura",
+    "fecha": "2026-09-28",
+    "sede": "Medellín",
+    "imagen": "img/noticia4.jpg",
+    "resumen": "El Poli presentó su catálogo editorial, un libro infantil hecho por egresados y relatos de estudiantes.",
+    "contenido": "Del 11 al 20 de septiembre el Poli estuvo en la Fiesta del Libro y la Cultura de Medellín. Allí se lanzó De grande quiero ser bombero, un libro infantil creado por egresados junto con el Cuerpo de Bomberos Voluntarios de Envigado. Además, estudiantes de Comunicación Digital presentaron cuatro relatos hechos en alianza con el Área Metropolitana del Valle de Aburrá, que cuentan historias de bibliotecas públicas y de mujeres líderes del barrio Granizal, en Bello.",
+    "fuente": "https://www.poli.edu.co/noticias/asi-se-vivio-la-participacion-del-poli-en-la-fiesta-del-libro-y-la-cultura-de-medellin",
+    "destacada": false
+  },
+  {
+    "id": 5,
+    "titulo": "Nuestro rector participó en el VI Seminario Internacional de Liderazgo Militar",
+    "categoria": "Institucional",
+    "fecha": "2026-09-29",
+    "sede": "Bogotá",
+    "imagen": "img/noticia5.jpg",
+    "resumen": "Juan Fernando Montañez habló sobre liderazgo colaborativo en la Escuela Superior de Guerra.",
+    "contenido": "El 9 de septiembre el rector Juan Fernando Montañez fue invitado al VI Seminario Internacional de Liderazgo Militar, realizado en el auditorio de la Escuela Superior de Guerra, junto con la vicerrectora Lucía Solano Felizzola. En su intervención explicó que un buen líder pone sus capacidades al servicio de metas colectivas y que las decisiones funcionan mejor cuando se construyen en equipo. También recordó que el Poli atiende a más de 61.500 estudiantes en Colombia.",
+    "fuente": "https://www.poli.edu.co/noticias/nuestro-rector-participo-en-el-vi-seminario-internacional-de-liderazgo-militar",
+    "destacada": false
+  },
+  {
+    "id": 6,
+    "titulo": "SincronIA y nuevos comienzos: así fue la Bienvenida a los Profesores Poli 2026-2",
+    "categoria": "Institucional",
+    "fecha": "2026-09-22",
+    "sede": "Bogotá",
+    "imagen": "img/noticia6.jpg",
+    "resumen": "Los profesores iniciaron el semestre con música, reflexiones y una charla sobre educación e IA.",
+    "contenido": "El 27 de agosto el Auditorio JMU de la sede principal en Bogotá recibió a los profesores del periodo 2026-2. El evento tuvo presentaciones culturales y la charla SincronIA, de la profesora Sindey Carolina Bernal Villamarín, sobre cómo mantener el componente humano de la educación en medio de los cambios tecnológicos. También se presentó el Plan de Desarrollo 2026-2030 y se compartieron mensajes de egresados que agradecieron a sus profesores.",
+    "fuente": "https://www.poli.edu.co/noticias/sincronia-y-nuevos-comienzos-asi-fue-la-bienvenida-los-profesores-poli-2026-2",
+    "destacada": false
+  },
+  {
+    "id": 7,
+    "titulo": "Expertos analizaron los retos de la logística en el IX Congreso Internacional",
+    "categoria": "Académico",
+    "fecha": "2026-09-22",
+    "sede": "Bogotá",
+    "imagen": "img/noticia7.jpg",
+    "resumen": "Académicos, empresarios y estudiantes hablaron de innovación, sostenibilidad y negocios globales.",
+    "contenido": "La sede City Campus, en Bogotá, fue el lugar del IX Congreso Internacional de Logística los días 9 y 10 de septiembre. El evento giró alrededor de tres temas: innovación, sostenibilidad y negocios globales. Se unieron cinco universidades de Bogotá e instituciones de Brasil, Panamá y Perú, y el segundo día se hicieron mesas de trabajo simultáneas cuyas sesiones quedaron grabadas.",
+    "fuente": "https://www.poli.edu.co/noticias/expertos-y-profesionales-analizaron-los-retos-de-la-logistica-en-el-ix-congreso",
+    "destacada": false
+  },
+  {
+    "id": 8,
+    "titulo": "El café fue protagonista en el III Congreso Internacional de Hospitalidad y Gastronomía",
+    "categoria": "Académico",
+    "fecha": "2026-09-17",
+    "sede": "Bogotá",
+    "imagen": "img/noticia8.jpg",
+    "resumen": "Hubo una estación de café para conocer el proceso del grano y charlas sobre turismo y tecnología.",
+    "contenido": "El 25 de agosto el programa de Administración Hotelera y Gastronómica realizó el III Congreso Internacional de Hospitalidad y Gastronomía en la sede principal de Bogotá, con aliados de México y Chile. Uno de los espacios más visitados fue la estación de café guiada por el profesor Damián Méndez, donde los asistentes conocieron el proceso del grano, los métodos de preparación y su valor cultural para Colombia. También se habló de cómo la tecnología está cambiando el turismo.",
+    "fuente": "https://www.poli.edu.co/noticias/el-cafe-fue-protagonista-en-el-iii-congreso-internacional-de-hospitalidad-y-gastronomia",
+    "destacada": false
+  }
+]

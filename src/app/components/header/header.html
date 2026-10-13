@@ -1,0 +1,29 @@
+<!-- ===== HEADER / MENÚ DE NAVEGACIÓN ===== -->
+<header>
+  <nav class="navbar navbar-expand-lg barra-superior">
+    <div class="container">
+      <a class="navbar-brand logo" routerLink="/">Noti<span>Poli</span></a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          @for (item of menu; track item.ruta) {
+            <li class="nav-item">
+              <!-- routerLinkActive pone la clase "active" en la página actual -->
+              <a class="nav-link" [routerLink]="item.ruta" routerLinkActive="active"
+                 [routerLinkActiveOptions]="{ exact: item.ruta === '/' }">
+                {{ item.texto }}
+                @if (item.texto === 'Favoritos') {
+                  <span class="badge bg-warning text-dark">{{ servicio.totalFavoritos() }}</span>
+                }
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- franja amarillo, azul y rojo -->
+  <div class="franja-colombia"></div>
+</header>
